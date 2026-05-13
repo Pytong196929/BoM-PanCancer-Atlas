@@ -25,8 +25,7 @@ That's it — the app is now running locally. 🎉
 >
 > 1. Open a terminal / command prompt **inside the unzipped folder**.
 > 2. Run:
->    ```cmd
->    ```cd 'the path of this folder'
+>    ```bash
 >    python -m http.server 8000
 >    ```
 >    (requires Python 3, which is pre-installed on Mac/Linux; on Windows, install from [python.org](https://www.python.org/))
