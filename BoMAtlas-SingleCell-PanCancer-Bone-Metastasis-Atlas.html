@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>BoM-Atlas | Single-Cell Pan-Cancer Bone Metastasis Atlas</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Arial, Helvetica, sans-serif;
+         background:#f5f7fa; color:#222; }
+  header { background: linear-gradient(135deg,#1a4f8b,#2d7dd2); color:#fff;
+           padding:18px 28px; box-shadow:0 2px 6px rgba(0,0,0,.15); }
+  header h1 { margin:0; font-size:22px; font-weight:600; letter-spacing:.5px; }
+  header p  { margin:4px 0 0; font-size:13px; opacity:.9; }
+  nav { display:flex; background:#fff; border-bottom:1px solid #e1e6ed;
+        position:sticky; top:0; z-index:10; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+  nav button { flex:0 0 auto; padding:14px 22px; border:none; background:none;
+               cursor:pointer; font-size:14px; color:#555; border-bottom:3px solid transparent;
+               transition:all .2s; font-family: Arial, Helvetica, sans-serif; }
+  nav button:hover { color:#2d7dd2; background:#f0f5fa; }
+  nav button.active { color:#2d7dd2; border-bottom-color:#2d7dd2; font-weight:600; }
+  .tab { display:none; padding:22px 28px; }
+  .tab.active { display:block; }
+  .panel { background:#fff; border-radius:8px; padding:20px;
+           box-shadow:0 1px 3px rgba(0,0,0,.06); margin-bottom:18px; }
+  .controls { display:flex; flex-wrap:wrap; gap:14px; align-items:flex-end; margin-bottom:14px; }
+  .ctrl { display:flex; flex-direction:column; gap:4px; }
+  .ctrl label { font-size:12px; color:#666; font-weight:600; }
+  .ctrl select, .ctrl input, .ctrl textarea {
+    padding:8px 10px; border:1px solid #cfd6df; border-radius:5px; font-size:13px;
+    min-width:180px; background:#fff; font-family: Arial, Helvetica, sans-serif;
+  }
+  .ctrl textarea { min-width:240px; min-height:140px; font-family:monospace; line-height:1.5; }
+  button.primary { padding:9px 20px; background:#2d7dd2; color:#fff; border:none;
+                   border-radius:5px; font-size:13px; cursor:pointer; font-weight:600;
+                   font-family: Arial, Helvetica, sans-serif; }
+  button.primary:hover { background:#1a4f8b; }
+  .plot-wrap { width:100%; display:flex; justify-content:center; }
+  .plot { width:100%; }
+  .loading { padding:40px; text-align:center; color:#888; font-size:14px; }
+  .badge { display:inline-block; background:#e8f1fb; color:#1a4f8b;
+           padding:2px 8px; border-radius:10px; font-size:11px; margin-left:6px; }
+  .footer { text-align:center; color:#999; font-size:12px; padding:18px; }
+  .err { color:#c0392b; padding:10px; background:#fde8e8; border-radius:4px; }
+  .hint { font-size:12px; color:#777; margin-top:4px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🧬 BoM-Atlas <span style="font-weight:300;font-size:14px;opacity:.85;">| Pan-Cancer Bone Metastasis Single-Cell Atlas</span></h1>
+  <p>Interactive exploration of cell types, gene expression, and compositional landscapes</p>
+</header>
+
+<nav>
+  <button data-tab="umap"     class="active">UMAP Overview</button>
+  <button data-tab="dotplot">Gene Expression (Dotplot)</button>
+  <button data-tab="cancer">Composition by Cancer</button>
+  <button data-tab="tissue">Composition by Tissue</button>
+  <button data-tab="subexpr">Gene in Subtypes</button>
+</nav>
+
+<!-- ═══════════════════════ TAB 1: UMAP ═══════════════════════ -->
+<div id="tab-umap" class="tab active">
+  <div class="panel">
+    <div class="controls">
+      <div class="ctrl">
+        <label>Color by</label>
+        <select id="umap-color">
+          <option value="ma">CellMajor</option>
+          <option value="mi">CellMin</option>
+          <option value="ti">Tissue</option>
+          <option value="ca">Cancer</option>
+        </select>
+      </div>
+      <div class="ctrl">
+        <label>Subsample (for speed)</label>
+        <select id="umap-sub">
+          <option value="50000">50,000 cells</option>
+          <option value="100000">100,000 cells</option>
+          <option value="200000">200,000 cells</option>
+          <option value="0">All cells (slow)</option>
+        </select>
+      </div>
+      <button class="primary" id="umap-go">Render</button>
+      <span id="umap-info" style="font-size:12px;color:#666;"></span>
+    </div>
+    <div class="plot-wrap"><div id="umap-plot" class="plot"></div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ TAB 2: DOTPLOT ═══════════════════════ -->
+<div id="tab-dotplot" class="tab">
+  <div class="panel">
+    <div class="controls">
+      <div class="ctrl">
+        <label>Level</label>
+        <select id="dp-level">
+          <option value="major">CellMajor (overall)</option>
+          <option value="minor">CellMin (within a major type)</option>
+        </select>
+      </div>
+      <div class="ctrl" id="dp-major-wrap" style="display:none;">
+        <label>Choose Major Type</label>
+        <select id="dp-major"></select>
+      </div>
+      <div class="ctrl">
+        <label>Genes (one per line)</label>
+        <textarea id="dp-genes" placeholder="CD3D&#10;CD8A&#10;CD4&#10;FOXP3&#10;GZMB"></textarea>
+      </div>
+      <button class="primary" id="dp-go">Plot Dotplot</button>
+    </div>
+    <div id="dp-msg"></div>
+    <div class="plot-wrap"><div id="dp-plot" class="plot"></div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ TAB 3: CANCER ═══════════════════════ -->
+<div id="tab-cancer" class="tab">
+  <div class="panel">
+    <div class="controls">
+      <div class="ctrl">
+        <label>Scope</label>
+        <select id="cc-scope">
+          <option value="overall">Overall (CellMajor across cancers)</option>
+          <option value="major">Within a major type (CellMin across cancers)</option>
+        </select>
+      </div>
+      <div class="ctrl" id="cc-major-wrap" style="display:none;">
+        <label>Choose Major Type</label>
+        <select id="cc-major"></select>
+      </div>
+      <button class="primary" id="cc-go">Render Stacked Bar</button>
+    </div>
+    <div class="plot-wrap"><div id="cc-plot" class="plot"></div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ TAB 4: TISSUE ═══════════════════════ -->
+<div id="tab-tissue" class="tab">
+  <div class="panel">
+    <div class="controls">
+      <div class="ctrl">
+        <label>Scope</label>
+        <select id="tc-scope">
+          <option value="overall">Overall (CellMajor)</option>
+          <option value="major">Within a major type (CellMin)</option>
+        </select>
+      </div>
+      <div class="ctrl" id="tc-major-wrap" style="display:none;">
+        <label>Choose Major Type</label>
+        <select id="tc-major"></select>
+      </div>
+      <button class="primary" id="tc-go">Render Stacked Bar</button>
+    </div>
+    <div class="plot-wrap"><div id="tc-plot" class="plot"></div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ TAB 5: SUBTYPE EXPR ═══════════════════════ -->
+<div id="tab-subexpr" class="tab">
+  <div class="panel">
+    <p style="margin:0 0 12px;color:#555;font-size:13px;">
+      Select a major cell type and visualize gene expression across its sub-clusters (CellMin).
+    </p>
+    <div class="controls">
+      <div class="ctrl">
+        <label>Major Type</label>
+        <select id="sx-major"></select>
+      </div>
+      <div class="ctrl">
+        <label>Genes (one per line)</label>
+        <textarea id="sx-genes" placeholder="MKI67&#10;TOP2A&#10;CDK1"></textarea>
+      </div>
+      <button class="primary" id="sx-go">Plot</button>
+    </div>
+    <div id="sx-msg"></div>
+    <div class="plot-wrap"><div id="sx-plot" class="plot"></div></div>
+  </div>
+</div>
+
+<div class="footer">
+  BoM-Atlas © 2025 — Built with Plotly.js · Static deployment-friendly (GitHub Pages compatible)
+</div>
+
+<script>
+// ═════════════════════════════════════════════════════════════════
+//  Global state & utilities
+// ═════════════════════════════════════════════════════════════════
+const DATA_DIR = "web_data";
+const STATE = {
+  labels: null, hierarchy: null, majorMap: {}, geneList: null,
+  umap: null, dpCache: {},
+};
+
+const FONT = "Arial, Helvetica, sans-serif";
+
+const PALETTE = [
+  "#E64B35","#4DBBD5","#00A087","#3C5488","#F39B7F","#8491B4","#91D1C2","#DC0000",
+  "#7E6148","#B09C85","#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#8c564b",
+  "#e377c2","#7f7f7f","#bcbd22","#17becf","#aec7e8","#ffbb78","#98df8a","#ff9896",
+  "#c5b0d5","#c49c94","#f7b6d2","#c7c7c7","#dbdb8d","#9edae5","#393b79","#637939",
+  "#8c6d31","#843c39","#7b4173","#5254a3","#9c9ede","#cedb9c","#e7969c","#ce6dbd"
+];
+const colorOf = (i) => PALETTE[i % PALETTE.length];
+
+// Seurat-like FeaturePlot/DotPlot color scale: light grey → blue
+const SEURAT_SCALE = [
+  [0.0, "#d9d9d9"],
+  [0.25,"#9ecae1"],
+  [0.5, "#4292c6"],
+  [0.75,"#2171b5"],
+  [1.0, "#08306b"]
+];
+
+function fetchCSV(path) {
+  return new Promise((resolve, reject) => {
+    Papa.parse(`${DATA_DIR}/${path}`, {
+      download: true, header: true, dynamicTyping: true, skipEmptyLines: true,
+      complete: r => resolve(r.data), error: e => reject(e)
+    });
+  });
+}
+function fetchTSV(path) {
+  return new Promise((resolve, reject) => {
+    Papa.parse(`${DATA_DIR}/${path}`, {
+      download: true, header: true, dynamicTyping: true, skipEmptyLines: true,
+      delimiter: "\t",
+      complete: r => resolve(r.data), error: e => reject(e)
+    });
+  });
+}
+async function fetchJSON(path) {
+  const r = await fetch(`${DATA_DIR}/${path}`);
+  return r.json();
+}
+
+function shuffleSample(arr, n) {
+  if (!n || n >= arr.length) return arr;
+  const out = arr.slice(0, n);
+  for (let i = n; i < arr.length; i++) {
+    const j = Math.floor(Math.random() * (i + 1));
+    if (j < n) out[j] = arr[i];
+  }
+  return out;
+}
+
+// ═════════════════════════════════════════════════════════════════
+//  Tab switching
+// ═════════════════════════════════════════════════════════════════
+document.querySelectorAll("nav button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("nav button").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
+  });
+});
+
+// ═════════════════════════════════════════════════════════════════
+//  Bootstrap: load metadata
+// ═════════════════════════════════════════════════════════════════
+async function init() {
+  try {
+    const [labels, hier, mmap, glist] = await Promise.all([
+      fetchJSON("umap_labels.json"),
+      fetchCSV("cell_hierarchy.csv"),
+      fetchCSV("major_name_map.csv"),
+      fetchCSV("gene_list.csv"),
+    ]);
+    STATE.labels = labels;
+    STATE.hierarchy = hier;
+    mmap.forEach(r => STATE.majorMap[r.CellMajor] = r.safe_name);
+    STATE.geneList = new Set(glist.map(r => r.gene));
+
+    const majors = labels.major;
+    ["dp-major","cc-major","tc-major","sx-major"].forEach(id => {
+      const sel = document.getElementById(id);
+      majors.forEach(m => {
+        const o = document.createElement("option");
+        o.value = m; o.textContent = m;
+        sel.appendChild(o);
+      });
+    });
+
+    document.getElementById("umap-info").textContent =
+      `${labels.major.length} major · ${labels.minor.length} minor · ${labels.tissue.length} tissue · ${labels.cancer.length} cancer`;
+  } catch (e) {
+    alert("Failed to load metadata. Make sure web_data/ is in the same folder.\n" + e);
+  }
+}
+
+// ═════════════════════════════════════════════════════════════════
+//  TAB 1: UMAP
+// ═════════════════════════════════════════════════════════════════
+async function renderUMAP() {
+  const div = document.getElementById("umap-plot");
+  div.innerHTML = '<div class="loading">Loading UMAP coordinates...</div>';
+
+  if (!STATE.umap) {
+    STATE.umap = await fetchTSV("umap_data.tsv");
+  }
+
+  const colorBy = document.getElementById("umap-color").value;
+  const subN    = parseInt(document.getElementById("umap-sub").value);
+  const labelArr = colorBy === "ma" ? STATE.labels.major
+                 : colorBy === "mi" ? STATE.labels.minor
+                 : colorBy === "ti" ? STATE.labels.tissue
+                                    : STATE.labels.cancer;
+
+  const sampled = shuffleSample(STATE.umap, subN);
+
+  const groups = {};
+  sampled.forEach(r => {
+    const k = r[colorBy];
+    if (!groups[k]) groups[k] = { x:[], y:[] };
+    groups[k].x.push(r.x);
+    groups[k].y.push(r.y);
+  });
+
+  const traces = Object.keys(groups).sort((a,b)=>a-b).map((k,i) => ({
+    x: groups[k].x, y: groups[k].y,
+    mode: "markers", type: "scattergl",
+    name: labelArr[k],
+    marker: { size: 2.5, color: colorOf(i), opacity: 0.7 },
+    hoverinfo: "name"
+  }));
+
+  Plotly.newPlot(div, traces, {
+    title: { text:`UMAP — colored by ${colorBy}  (${sampled.length.toLocaleString()} cells shown)`,
+             font:{ family:FONT, size:15 } },
+    font: { family: FONT },
+    xaxis: {
+      title: { text:"UMAP_1", font:{ family:FONT, size:13 } },
+      showgrid:false, zeroline:false,
+      showticklabels:false, ticks:"",
+      scaleanchor:"y", scaleratio:1, constrain:"domain"
+    },
+    yaxis: {
+      title: { text:"UMAP_2", font:{ family:FONT, size:13 } },
+      showgrid:false, zeroline:false,
+      showticklabels:false, ticks:"",
+      constrain:"domain"
+    },
+    legend: { itemsizing:"constant", x:1.02, y:1, xanchor:"left", yanchor:"top",
+              font:{ family:FONT, size:12 } },
+    width:  900,
+    height: 680,
+    margin:{ t:55, r:40, b:55, l:55 }
+  }, {responsive:false});
+}
+document.getElementById("umap-go").addEventListener("click", renderUMAP);
+
+// ═════════════════════════════════════════════════════════════════
+//  Helpers for dotplot tabs
+// ═════════════════════════════════════════════════════════════════
+function parseGenes(txt) {
+  return [...new Set(
+    txt.split(/[\s,;]+/).map(s => s.trim()).filter(Boolean)
+  )];
+}
+
+async function loadDP(prefix) {
+  if (STATE.dpCache[prefix]) return STATE.dpCache[prefix];
+  const [avg, pct] = await Promise.all([
+    fetchCSV(`${prefix}_avg.csv`),
+    fetchCSV(`${prefix}_pct.csv`),
+  ]);
+  const idx = {};
+  avg.forEach((r, i) => idx[r.gene] = i);
+  const cols = Object.keys(avg[0]).filter(c => c !== "gene");
+  const cache = { avg, pct, idx, cols };
+  STATE.dpCache[prefix] = cache;
+  return cache;
+}
+
+// ─── Publication-style dotplot ───
+//  • white background (no grey backdrop)
+//  • compact column spacing
+//  • fixed colorbar (Avg expression) + size legend (% expressed) on the right
+function plotDotplot(divId, genes, cellTypes, avgRows, pctRows, idx, title) {
+  const xs=[], ys=[], colors=[], sizes=[], pctVals=[], texts=[];
+  genes.forEach(g => {
+    const ri = idx[g];
+    if (ri == null) return;
+    cellTypes.forEach(ct => {
+      const a = Number(avgRows[ri][ct]);
+      const p = Number(pctRows[ri][ct]);
+      if (!isFinite(a) || !isFinite(p)) return;
+      xs.push(ct);
+      ys.push(g);
+      colors.push(a);
+      const pClamped = Math.max(0, Math.min(100, p));
+      pctVals.push(pClamped);
+      sizes.push(4 + (pClamped / 100) * 20);  // 4–24 px
+      texts.push(`${g} | ${ct}<br>avg expr: ${a.toFixed(3)}<br>% expressed: ${p.toFixed(1)}%`);
+    });
+  });
+
+  const div = document.getElementById(divId);
+  if (xs.length === 0) {
+    div.innerHTML = '<div class="err">No valid data points to plot.</div>';
+    return;
+  }
+
+  // Main dotplot trace
+  const mainTrace = {
+    x: xs, y: ys,
+    mode: "markers", type: "scatter",
+    text: texts, hoverinfo: "text",
+    showlegend: false,
+    marker: {
+      size: sizes,
+      color: colors,
+      colorscale: SEURAT_SCALE,
+      showscale: true,
+      colorbar: {
+        title: { text:"Avg expr", font:{ family:FONT, size:11 } },
+        thickness: 14,
+        len: 0.45,
+        y: 0.78,
+        yanchor: "middle",
+        x: 1.02,
+        xanchor: "left",
+        outlinewidth: 0,
+        tickfont:{ family:FONT, size:10 }
+      },
+      line: { width:0.5, color:"#333" }
+    }
+  };
+
+  // Size legend traces — fake markers placed off-canvas, shown only in legend.
+  // Use 4 reference percent values.
+  const sizeRefs = [25, 50, 75, 100];
+  const sizeTraces = sizeRefs.map(p => ({
+    x: [null], y: [null],
+    mode: "markers", type: "scatter",
+    name: `${p}%`,
+    showlegend: true,
+    marker: {
+      size: 4 + (p/100) * 20,
+      color: "#555",
+      line: { width:0.5, color:"#333" }
+    },
+    hoverinfo: "skip"
+  }));
+
+  // Compact figure size (tighter columns)
+  const nCells = cellTypes.length;
+  const nGenes = genes.length;
+  const plotW  = Math.max(420, Math.min(900, 42 * nCells + 280));
+  const plotH  = Math.max(280, 30 * nGenes + 170);
+
+  Plotly.newPlot(div, [mainTrace, ...sizeTraces], {
+    title: { text:title, font:{ family:FONT, size:14 } },
+    font: { family: FONT },
+    paper_bgcolor: "#ffffff",
+    plot_bgcolor: "#ffffff",
+    xaxis: {
+      type: "category",
+      categoryorder: "array",
+      categoryarray: cellTypes,
+      tickangle:-40, automargin:true,
+      tickfont:{ family:FONT, size:12 },
+      showgrid:false, zeroline:false,
+      showline:true, linecolor:"#333", linewidth:1,
+      ticks:"outside", tickcolor:"#333"
+    },
+    yaxis: {
+      type: "category",
+      categoryorder: "array",
+      categoryarray: genes.slice().reverse(),
+      automargin:true,
+      tickfont:{ family:FONT, size:12 },
+      showgrid:false, zeroline:false,
+      showline:true, linecolor:"#333", linewidth:1,
+      ticks:"outside", tickcolor:"#333"
+    },
+    legend: {
+      title: { text:"% expressed", font:{ family:FONT, size:11 } },
+      x: 1.02, xanchor:"left",
+      y: 0.30, yanchor:"middle",
+      itemsizing:"constant",
+      bgcolor:"rgba(255,255,255,0)",
+      bordercolor:"rgba(0,0,0,0)",
+      font:{ family:FONT, size:11 }
+    },
+    width:  plotW,
+    height: plotH,
+    margin: { t:50, r:170, b:120, l:110 }
+  }, {responsive:false});
+}
+
+// ═════════════════════════════════════════════════════════════════
+//  TAB 2: Dotplot
+// ═════════════════════════════════════════════════════════════════
+document.getElementById("dp-level").addEventListener("change", e => {
+  document.getElementById("dp-major-wrap").style.display =
+    e.target.value === "minor" ? "" : "none";
+});
+
+document.getElementById("dp-go").addEventListener("click", async () => {
+  const msg = document.getElementById("dp-msg");
+  const div = document.getElementById("dp-plot");
+  msg.innerHTML=""; div.innerHTML='<div class="loading">Loading dotplot data...</div>';
+
+  const genes = parseGenes(document.getElementById("dp-genes").value);
+  if (!genes.length) { msg.innerHTML='<div class="err">Please input at least one gene.</div>'; div.innerHTML=""; return; }
+
+  const level = document.getElementById("dp-level").value;
+  let prefix, title;
+  if (level === "major") {
+    prefix = "dp_major";
+    title  = "Gene Expression — across CellMajor types";
+  } else {
+    const major = document.getElementById("dp-major").value;
+    const safe  = STATE.majorMap[major];
+    if (!safe) { msg.innerHTML='<div class="err">Unknown major type.</div>'; div.innerHTML=""; return; }
+    prefix = `dp_minor_${safe}`;
+    title  = `Gene Expression — sub-types within ${major}`;
+  }
+
+  try {
+    const cache = await loadDP(prefix);
+    const missing = genes.filter(g => cache.idx[g] == null);
+    if (missing.length) msg.innerHTML = `<div class="err">Not found / filtered out: ${missing.join(", ")}</div>`;
+    const valid = genes.filter(g => cache.idx[g] != null);
+    if (!valid.length) { div.innerHTML=""; return; }
+    plotDotplot("dp-plot", valid, cache.cols, cache.avg, cache.pct, cache.idx, title);
+  } catch (e) {
+    div.innerHTML = `<div class="err">Failed to load: ${e}</div>`;
+  }
+});
+
+// ═════════════════════════════════════════════════════════════════
+//  Stacked bar plotter (shared by Tab 3 & Tab 4)
+// ═════════════════════════════════════════════════════════════════
+function plotStacked(divId, xCats, cells, M, opts) {
+  xCats.forEach(t => {
+    const s = cells.reduce((a,c) => a + (M[t][c]||0), 0);
+    if (s > 0) cells.forEach(c => M[t][c] = ((M[t][c]||0) / s) * 100);
+  });
+
+  const traces = cells.map((c,i) => ({
+    name: c, type:"bar",
+    x: xCats, y: xCats.map(t => +(M[t][c]||0).toFixed(2)),
+    marker:{ color: colorOf(i), line:{ width:0.3, color:"#fff" } },
+    hovertemplate: `<b>${c}</b><br>%{x}: %{y:.2f}%<extra></extra>`
+  }));
+
+  const nX     = xCats.length;
+  const plotW  = Math.max(380, Math.min(1000, 60 * nX + 320));
+  const plotH  = opts.height || 520;
+
+  Plotly.newPlot(divId, traces, {
+    title: { text: opts.title, font:{ family:FONT, size:14 } },
+    font: { family: FONT },
+    barmode:"stack",
+    bargap: opts.bargap ?? 0.25,
+    xaxis:{
+      title: { text: opts.xtitle || "", font:{ family:FONT, size: opts.xtitleSize || 13 } },
+      tickfont:{ family:FONT, size: opts.xtickSize || 12 },
+      tickangle: opts.xangle ?? -30,
+      automargin:true
+    },
+    yaxis:{
+      title: { text:"Proportion (%)", font:{ family:FONT, size:12 } },
+      range:[0,100],
+      tickfont:{ family:FONT, size:11 }
+    },
+    width:  plotW,
+    height: plotH,
+    margin:{ t:50, r:30, b:80, l:60 },
+    legend:{ traceorder:"reversed", font:{ family:FONT, size:11 } },
+    plot_bgcolor: "#fafafa"
+  }, {responsive:false});
+}
+
+// ═════════════════════════════════════════════════════════════════
+//  TAB 3: Composition by Cancer (stacked bar)
+// ═════════════════════════════════════════════════════════════════
+document.getElementById("cc-scope").addEventListener("change", e => {
+  document.getElementById("cc-major-wrap").style.display =
+    e.target.value === "major" ? "" : "none";
+});
+
+document.getElementById("cc-go").addEventListener("click", async () => {
+  const div = document.getElementById("cc-plot");
+  div.innerHTML='<div class="loading">Loading composition data...</div>';
+  const scope = document.getElementById("cc-scope").value;
+
+  let rows, ykey, title;
+  if (scope === "overall") {
+    rows  = await fetchCSV("comp_cancer_major.csv");
+    ykey  = "CellMajor";
+    title = "CellMajor composition across cancers";
+  } else {
+    const major = document.getElementById("cc-major").value;
+    const all   = await fetchCSV("comp_cancer_minor.csv");
+    rows  = all.filter(r => r.CellMajor === major);
+    ykey  = "CellMin1";
+    title = `CellMin composition across cancers — ${major}`;
+  }
+
+  const cancers = [...new Set(rows.map(r=>r.Cancer))].sort();
+  const cells   = [...new Set(rows.map(r=>r[ykey]))].sort();
+  const M = {};
+  cancers.forEach(t => M[t] = {});
+  rows.forEach(r => { M[r.Cancer][r[ykey]] = r.pct; });
+
+  plotStacked("cc-plot", cancers, cells, M, {
+    title, xtitle: "Cancer",
+    xtitleSize: 14, xtickSize: 12, xangle: -35, height: 520
+  });
+});
+
+// ═════════════════════════════════════════════════════════════════
+//  TAB 4: Composition by Tissue (stacked bar)
+// ═════════════════════════════════════════════════════════════════
+document.getElementById("tc-scope").addEventListener("change", e => {
+  document.getElementById("tc-major-wrap").style.display =
+    e.target.value === "major" ? "" : "none";
+});
+
+document.getElementById("tc-go").addEventListener("click", async () => {
+  const div = document.getElementById("tc-plot");
+  div.innerHTML='<div class="loading">Loading composition data...</div>';
+  const scope = document.getElementById("tc-scope").value;
+
+  let rows, ykey, title;
+  if (scope === "overall") {
+    rows  = await fetchCSV("comp_tissue_major.csv");
+    ykey  = "CellMajor";
+    title = "CellMajor composition across tissues";
+  } else {
+    const major = document.getElementById("tc-major").value;
+    const all   = await fetchCSV("comp_tissue_minor.csv");
+    rows  = all.filter(r => r.CellMajor === major);
+    ykey  = "CellMin1";
+    title = `CellMin composition across tissues — ${major}`;
+  }
+
+  const tissues = [...new Set(rows.map(r=>r.Tissue))].sort();
+  const cells   = [...new Set(rows.map(r=>r[ykey]))].sort();
+  const M = {};
+  tissues.forEach(t => M[t] = {});
+  rows.forEach(r => { M[r.Tissue][r[ykey]] = r.pct; });
+
+  plotStacked("tc-plot", tissues, cells, M, {
+    title, xtitle: "Tissue",
+    xtitleSize: 16, xtickSize: 15, xangle: 0, height: 520, bargap:0.45
+  });
+});
+
+// ═════════════════════════════════════════════════════════════════
+//  TAB 5: Gene expression in subtypes of a chosen major
+// ═════════════════════════════════════════════════════════════════
+document.getElementById("sx-go").addEventListener("click", async () => {
+  const msg = document.getElementById("sx-msg");
+  const div = document.getElementById("sx-plot");
+  msg.innerHTML=""; div.innerHTML='<div class="loading">Loading...</div>';
+
+  const major = document.getElementById("sx-major").value;
+  const safe  = STATE.majorMap[major];
+  const genes = parseGenes(document.getElementById("sx-genes").value);
+  if (!genes.length) { msg.innerHTML='<div class="err">Please input genes.</div>'; div.innerHTML=""; return; }
+
+  try {
+    const cache = await loadDP(`dp_minor_${safe}`);
+    const missing = genes.filter(g => cache.idx[g] == null);
+    if (missing.length) msg.innerHTML = `<div class="err">Not found: ${missing.join(", ")}</div>`;
+    const valid = genes.filter(g => cache.idx[g] != null);
+    if (!valid.length) { div.innerHTML=""; return; }
+    plotDotplot("sx-plot", valid, cache.cols, cache.avg, cache.pct, cache.idx,
+                `Gene expression in ${major} sub-types`);
+  } catch(e) {
+    div.innerHTML = `<div class="err">Failed: ${e}</div>`;
+  }
+});
+
+// ═════════════════════════════════════════════════════════════════
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+"Tissue","CellMajor","n","pct"
+"BoM","B cells",10136,3.114
+"BoM","Endothelial cells",12434,3.82
+"BoM","Epithelial cells",39392,12.103
+"BoM","Mast cells",881,0.271
+"BoM","Mesenchymal cells",50379,15.479
+"BoM","Myeloid cells",76313,23.448
+"BoM","Plasma cells",3123,0.96
+"BoM","T and NK cells",132805,40.805
+"PT","B cells",47364,9.684
+"PT","Endothelial cells",21381,4.372
+"PT","Epithelial cells",59609,12.188
+"PT","Mast cells",12343,2.524
+"PT","Mesenchymal cells",21514,4.399
+"PT","Myeloid cells",53295,10.897
+"PT","Plasma cells",20042,4.098
+"PT","T and NK cells",253549,51.84
+"hBM","B cells",6007,8.441
+"hBM","Endothelial cells",4975,6.991
+"hBM","Epithelial cells",2116,2.973
+"hBM","Mast cells",574,0.807
+"hBM","Mesenchymal cells",21374,30.035
+"hBM","Myeloid cells",13231,18.592
+"hBM","Plasma cells",12296,17.278
+"hBM","T and NK cells",10591,14.883

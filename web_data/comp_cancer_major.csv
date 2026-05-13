@@ -1,0 +1,89 @@
+"Cancer","CellMajor","n","pct"
+"BC","B cells",4629,3.391
+"BC","Endothelial cells",7388,5.413
+"BC","Epithelial cells",19397,14.211
+"BC","Mast cells",210,0.154
+"BC","Mesenchymal cells",35460,25.979
+"BC","Myeloid cells",25823,18.919
+"BC","Plasma cells",2230,1.634
+"BC","T and NK cells",41359,30.301
+"CC","B cells",1390,4.399
+"CC","Endothelial cells",132,0.418
+"CC","Epithelial cells",3380,10.697
+"CC","Mast cells",104,0.329
+"CC","Mesenchymal cells",2722,8.615
+"CC","Myeloid cells",6866,21.73
+"CC","Plasma cells",905,2.864
+"CC","T and NK cells",16098,50.948
+"EC","B cells",2106,7.911
+"EC","Endothelial cells",1935,7.269
+"EC","Epithelial cells",5624,21.127
+"EC","Mast cells",480,1.803
+"EC","Mesenchymal cells",4080,15.327
+"EC","Myeloid cells",6799,25.541
+"EC","Plasma cells",229,0.86
+"EC","T and NK cells",5367,20.162
+"GC","B cells",18585,14.735
+"GC","Endothelial cells",1609,1.276
+"GC","Epithelial cells",2844,2.255
+"GC","Mast cells",1802,1.429
+"GC","Mesenchymal cells",4487,3.558
+"GC","Myeloid cells",4532,3.593
+"GC","Plasma cells",14657,11.621
+"GC","T and NK cells",77610,61.534
+"HCC","B cells",343,0.925
+"HCC","Endothelial cells",2106,5.679
+"HCC","Epithelial cells",11866,31.996
+"HCC","Mast cells",83,0.224
+"HCC","Mesenchymal cells",2848,7.679
+"HCC","Myeloid cells",7089,19.115
+"HCC","Plasma cells",1149,3.098
+"HCC","T and NK cells",11602,31.284
+"KC","B cells",6981,4.515
+"KC","Endothelial cells",5069,3.278
+"KC","Epithelial cells",8050,5.207
+"KC","Mast cells",1483,0.959
+"KC","Mesenchymal cells",8045,5.203
+"KC","Myeloid cells",37797,24.446
+"KC","Plasma cells",1536,0.993
+"KC","T and NK cells",85653,55.398
+"LC","B cells",9875,9.885
+"LC","Endothelial cells",3392,3.395
+"LC","Epithelial cells",5695,5.701
+"LC","Mast cells",7319,7.326
+"LC","Mesenchymal cells",2190,2.192
+"LC","Myeloid cells",21590,21.612
+"LC","Plasma cells",1456,1.457
+"LC","T and NK cells",48381,48.43
+"NPC","B cells",12557,15.285
+"NPC","Endothelial cells",26,0.032
+"NPC","Epithelial cells",2505,3.049
+"NPC","Mast cells",310,0.377
+"NPC","Mesenchymal cells",643,0.783
+"NPC","Myeloid cells",3820,4.65
+"NPC","Plasma cells",758,0.923
+"NPC","T and NK cells",61531,74.901
+"PC","B cells",840,1.18
+"PC","Endothelial cells",7283,10.23
+"PC","Epithelial cells",16493,23.166
+"PC","Mast cells",1275,1.791
+"PC","Mesenchymal cells",8034,11.284
+"PC","Myeloid cells",9277,13.03
+"PC","Plasma cells",95,0.133
+"PC","T and NK cells",27899,39.186
+"TC","B cells",194,0.398
+"TC","Endothelial cells",4875,9.994
+"TC","Epithelial cells",23147,47.455
+"TC","Mast cells",158,0.324
+"TC","Mesenchymal cells",3384,6.938
+"TC","Myeloid cells",6015,12.332
+"TC","Plasma cells",150,0.308
+"TC","T and NK cells",10854,22.252
+"na","B cells",6007,8.441
+"na","Endothelial cells",4975,6.991
+"na","Epithelial cells",2116,2.973
+"na","Mast cells",574,0.807
+"na","Mesenchymal cells",21374,30.035
+"na","Myeloid cells",13231,18.592
+"na","Plasma cells",12296,17.278
+"na","T and NK cells",10591,14.883

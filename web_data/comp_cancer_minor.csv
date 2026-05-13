@@ -1,0 +1,876 @@
+"Cancer","CellMajor","CellMin1","n","pct"
+"BC","B cells","B_C10_LOMO2",79,1.707
+"BC","B cells","B_C11_MZB1_PC",52,1.123
+"BC","B cells","B_C1_CRIP1",991,21.409
+"BC","B cells","B_C2_IGHM_Bn",940,20.307
+"BC","B cells","B_C3_HSPA1A",703,15.187
+"BC","B cells","B_C4_FCRL1",938,20.264
+"BC","B cells","B_C5_IFIT3",366,7.907
+"BC","B cells","B_C6_ZZF331",181,3.91
+"BC","B cells","B_C7_MKI67",160,3.456
+"BC","B cells","B_C8_BACH2",172,3.716
+"BC","B cells","B_C9_IGLL5",47,1.015
+"BC","Endothelial cells","EC_C10_COL1A2",242,3.276
+"BC","Endothelial cells","EC_C11_RROX1",106,1.435
+"BC","Endothelial cells","EC_C12_FCN3",66,0.893
+"BC","Endothelial cells","EC_C13_MKI67",53,0.717
+"BC","Endothelial cells","EC_C1_IGFBP7",2011,27.22
+"BC","Endothelial cells","EC_C2_GJA5",852,11.532
+"BC","Endothelial cells","EC_C3_HSPA1A",689,9.326
+"BC","Endothelial cells","EC_C4_FLT1",345,4.67
+"BC","Endothelial cells","EC_C5_ROBO2",351,4.751
+"BC","Endothelial cells","EC_C6_ACKR1",1109,15.011
+"BC","Endothelial cells","EC_C7_IL6",1125,15.227
+"BC","Endothelial cells","EC_C8_IL32",377,5.103
+"BC","Endothelial cells","EC_C9_CXCR4",62,0.839
+"BC","Epithelial cells","Epithelial",19397,100
+"BC","Mast cells","Mast",210,100
+"BC","Mesenchymal cells","F_C1_MMP11",14795,41.723
+"BC","Mesenchymal cells","F_C2_MIF",7499,21.148
+"BC","Mesenchymal cells","F_C3_CXCL12",370,1.043
+"BC","Mesenchymal cells","F_C4_IGF1",3085,8.7
+"BC","Mesenchymal cells","F_C5_SPP1",359,1.012
+"BC","Mesenchymal cells","F_C6_COL2A1",615,1.734
+"BC","Mesenchymal cells","F_C7_MKI67",354,0.998
+"BC","Mesenchymal cells","F_C8_PLA2G2A",2,0.006
+"BC","Mesenchymal cells","Per_C1_RGS5",5406,15.245
+"BC","Mesenchymal cells","Per_C2_MYH11",2975,8.39
+"BC","Myeloid cells","M_C10_MKI67_Macro",811,3.141
+"BC","Myeloid cells","M_C11_MT1G_Macro",157,0.608
+"BC","Myeloid cells","M_C12_HSPA1A_Macro",318,1.231
+"BC","Myeloid cells","M_C13_MMP9_Macro",241,0.933
+"BC","Myeloid cells","M_C14_CD1C_cDC",926,3.586
+"BC","Myeloid cells","M_C15_LAMP3_cDC",254,0.984
+"BC","Myeloid cells","M_C16_LILRA4_pDC",582,2.254
+"BC","Myeloid cells","M_C17_S100A8_Neutro",5388,20.865
+"BC","Myeloid cells","M_C18_ISG15_Neutro",1546,5.987
+"BC","Myeloid cells","M_C19_AZU1_Neutro",284,1.1
+"BC","Myeloid cells","M_C1_IL1B_Mono",3191,12.357
+"BC","Myeloid cells","M_C20_CXCL8_Neutro",4,0.015
+"BC","Myeloid cells","M_C2_S100A8_Mono",103,0.399
+"BC","Myeloid cells","M_C3_FCGR3A_Mono",592,2.293
+"BC","Myeloid cells","M_C4_VCAN_Mono",710,2.749
+"BC","Myeloid cells","M_C5_CCL3_C1QA_Macro",3702,14.336
+"BC","Myeloid cells","M_C6_SPP1_Macro",2946,11.408
+"BC","Myeloid cells","M_C7_TREM2_Macro",1747,6.765
+"BC","Myeloid cells","M_C8_BMP2K_Macro",1431,5.542
+"BC","Myeloid cells","M_C9_ISG15_Macro",890,3.447
+"BC","Plasma cells","PC_C1_TXNDC5",372,16.682
+"BC","Plasma cells","PC_C2_GMDS",175,7.848
+"BC","Plasma cells","PC_C3_IGHGP",51,2.287
+"BC","Plasma cells","PC_C4_CD79A",541,24.26
+"BC","Plasma cells","PC_C5_HSPA1A",177,7.937
+"BC","Plasma cells","PC_C6_SELK",573,25.695
+"BC","Plasma cells","PC_C7_HLA-DRA",1,0.045
+"BC","Plasma cells","PC_C8_IGHG",328,14.709
+"BC","Plasma cells","PC_C9_IGHA",12,0.538
+"BC","T and NK cells","CD4T_C1_CCR7_Tn",7719,18.663
+"BC","T and NK cells","CD4T_C2_FOXP3_Treg",4157,10.051
+"BC","T and NK cells","CD4T_C3_BACH2",1703,4.118
+"BC","T and NK cells","CD4T_C4_CXCL13",2128,5.145
+"BC","T and NK cells","CD4T_C5_TOX",121,0.293
+"BC","T and NK cells","CD4T_C6_ISG15",426,1.03
+"BC","T and NK cells","CD8T_C1_HSPA1A",5794,14.009
+"BC","T and NK cells","CD8T_C2_GZMK",5684,13.743
+"BC","T and NK cells","CD8T_C3_PDCD1",1797,4.345
+"BC","T and NK cells","CD8T_C4_XCL1",2259,5.462
+"BC","T and NK cells","CD8T_C5_ISG15",2504,6.054
+"BC","T and NK cells","CD8T_C6_TOX",648,1.567
+"BC","T and NK cells","CD8T_C7_MKI67",2270,5.489
+"BC","T and NK cells","NK_C1_FCGR3A",721,1.743
+"BC","T and NK cells","NK_C2_XCL1",1043,2.522
+"BC","T and NK cells","NK_C3_HSPA1A",693,1.676
+"BC","T and NK cells","NK_C4_CX3CR1",576,1.393
+"BC","T and NK cells","NK_C5_KLRC2",194,0.469
+"BC","T and NK cells","NK_C6_NFKB1A",507,1.226
+"BC","T and NK cells","NK_C7_ISG15",335,0.81
+"BC","T and NK cells","NK_C8_CREM",80,0.193
+"CC","B cells","B_C10_LOMO2",72,5.18
+"CC","B cells","B_C11_MZB1_PC",2,0.144
+"CC","B cells","B_C1_CRIP1",547,39.353
+"CC","B cells","B_C2_IGHM_Bn",479,34.46
+"CC","B cells","B_C3_HSPA1A",125,8.993
+"CC","B cells","B_C4_FCRL1",39,2.806
+"CC","B cells","B_C5_IFIT3",61,4.388
+"CC","B cells","B_C6_ZZF331",1,0.072
+"CC","B cells","B_C7_MKI67",56,4.029
+"CC","B cells","B_C9_IGLL5",8,0.576
+"CC","Endothelial cells","EC_C10_COL1A2",2,1.515
+"CC","Endothelial cells","EC_C11_RROX1",7,5.303
+"CC","Endothelial cells","EC_C13_MKI67",6,4.545
+"CC","Endothelial cells","EC_C1_IGFBP7",33,25
+"CC","Endothelial cells","EC_C2_GJA5",16,12.121
+"CC","Endothelial cells","EC_C3_HSPA1A",2,1.515
+"CC","Endothelial cells","EC_C4_FLT1",7,5.303
+"CC","Endothelial cells","EC_C5_ROBO2",10,7.576
+"CC","Endothelial cells","EC_C6_ACKR1",17,12.879
+"CC","Endothelial cells","EC_C7_IL6",3,2.273
+"CC","Endothelial cells","EC_C8_IL32",23,17.424
+"CC","Endothelial cells","EC_C9_CXCR4",6,4.545
+"CC","Epithelial cells","Epithelial",3380,100
+"CC","Mast cells","Mast",104,100
+"CC","Mesenchymal cells","F_C1_MMP11",1282,47.098
+"CC","Mesenchymal cells","F_C2_MIF",531,19.508
+"CC","Mesenchymal cells","F_C3_CXCL12",17,0.625
+"CC","Mesenchymal cells","F_C4_IGF1",327,12.013
+"CC","Mesenchymal cells","F_C5_SPP1",30,1.102
+"CC","Mesenchymal cells","F_C6_COL2A1",312,11.462
+"CC","Mesenchymal cells","F_C7_MKI67",19,0.698
+"CC","Mesenchymal cells","Per_C1_RGS5",131,4.813
+"CC","Mesenchymal cells","Per_C2_MYH11",73,2.682
+"CC","Myeloid cells","M_C10_MKI67_Macro",54,0.786
+"CC","Myeloid cells","M_C11_MT1G_Macro",49,0.714
+"CC","Myeloid cells","M_C12_HSPA1A_Macro",114,1.66
+"CC","Myeloid cells","M_C13_MMP9_Macro",24,0.35
+"CC","Myeloid cells","M_C14_CD1C_cDC",217,3.161
+"CC","Myeloid cells","M_C15_LAMP3_cDC",96,1.398
+"CC","Myeloid cells","M_C16_LILRA4_pDC",37,0.539
+"CC","Myeloid cells","M_C17_S100A8_Neutro",3377,49.184
+"CC","Myeloid cells","M_C18_ISG15_Neutro",405,5.899
+"CC","Myeloid cells","M_C19_AZU1_Neutro",16,0.233
+"CC","Myeloid cells","M_C1_IL1B_Mono",679,9.889
+"CC","Myeloid cells","M_C2_S100A8_Mono",36,0.524
+"CC","Myeloid cells","M_C3_FCGR3A_Mono",78,1.136
+"CC","Myeloid cells","M_C4_VCAN_Mono",15,0.218
+"CC","Myeloid cells","M_C5_CCL3_C1QA_Macro",545,7.938
+"CC","Myeloid cells","M_C6_SPP1_Macro",681,9.918
+"CC","Myeloid cells","M_C7_TREM2_Macro",284,4.136
+"CC","Myeloid cells","M_C8_BMP2K_Macro",20,0.291
+"CC","Myeloid cells","M_C9_ISG15_Macro",139,2.024
+"CC","Plasma cells","PC_C1_TXNDC5",797,88.066
+"CC","Plasma cells","PC_C2_GMDS",2,0.221
+"CC","Plasma cells","PC_C3_IGHGP",8,0.884
+"CC","Plasma cells","PC_C4_CD79A",1,0.11
+"CC","Plasma cells","PC_C5_HSPA1A",71,7.845
+"CC","Plasma cells","PC_C8_IGHG",20,2.21
+"CC","Plasma cells","PC_C9_IGHA",6,0.663
+"CC","T and NK cells","CD4T_C1_CCR7_Tn",2801,17.4
+"CC","T and NK cells","CD4T_C2_FOXP3_Treg",1205,7.485
+"CC","T and NK cells","CD4T_C3_BACH2",765,4.752
+"CC","T and NK cells","CD4T_C4_CXCL13",486,3.019
+"CC","T and NK cells","CD4T_C5_TOX",154,0.957
+"CC","T and NK cells","CD4T_C6_ISG15",60,0.373
+"CC","T and NK cells","CD8T_C1_HSPA1A",1232,7.653
+"CC","T and NK cells","CD8T_C2_GZMK",2560,15.903
+"CC","T and NK cells","CD8T_C3_PDCD1",1935,12.02
+"CC","T and NK cells","CD8T_C4_XCL1",1179,7.324
+"CC","T and NK cells","CD8T_C5_ISG15",347,2.156
+"CC","T and NK cells","CD8T_C6_TOX",737,4.578
+"CC","T and NK cells","CD8T_C7_MKI67",986,6.125
+"CC","T and NK cells","NK_C1_FCGR3A",414,2.572
+"CC","T and NK cells","NK_C2_XCL1",549,3.41
+"CC","T and NK cells","NK_C3_HSPA1A",171,1.062
+"CC","T and NK cells","NK_C4_CX3CR1",70,0.435
+"CC","T and NK cells","NK_C5_KLRC2",266,1.652
+"CC","T and NK cells","NK_C6_NFKB1A",135,0.839
+"CC","T and NK cells","NK_C7_ISG15",46,0.286
+"EC","B cells","B_C10_LOMO2",91,4.321
+"EC","B cells","B_C1_CRIP1",519,24.644
+"EC","B cells","B_C2_IGHM_Bn",397,18.851
+"EC","B cells","B_C3_HSPA1A",306,14.53
+"EC","B cells","B_C4_FCRL1",29,1.377
+"EC","B cells","B_C5_IFIT3",52,2.469
+"EC","B cells","B_C7_MKI67",40,1.899
+"EC","B cells","B_C8_BACH2",1,0.047
+"EC","B cells","B_C9_IGLL5",671,31.861
+"EC","Endothelial cells","EC_C10_COL1A2",53,2.739
+"EC","Endothelial cells","EC_C11_RROX1",289,14.935
+"EC","Endothelial cells","EC_C12_FCN3",10,0.517
+"EC","Endothelial cells","EC_C13_MKI67",22,1.137
+"EC","Endothelial cells","EC_C1_IGFBP7",542,28.01
+"EC","Endothelial cells","EC_C2_GJA5",181,9.354
+"EC","Endothelial cells","EC_C3_HSPA1A",116,5.995
+"EC","Endothelial cells","EC_C5_ROBO2",4,0.207
+"EC","Endothelial cells","EC_C6_ACKR1",219,11.318
+"EC","Endothelial cells","EC_C7_IL6",333,17.209
+"EC","Endothelial cells","EC_C8_IL32",12,0.62
+"EC","Endothelial cells","EC_C9_CXCR4",154,7.959
+"EC","Epithelial cells","Epithelial",5624,100
+"EC","Mast cells","Mast",480,100
+"EC","Mesenchymal cells","F_C1_MMP11",723,17.721
+"EC","Mesenchymal cells","F_C2_MIF",605,14.828
+"EC","Mesenchymal cells","F_C3_CXCL12",87,2.132
+"EC","Mesenchymal cells","F_C4_IGF1",1344,32.941
+"EC","Mesenchymal cells","F_C5_SPP1",1,0.025
+"EC","Mesenchymal cells","F_C6_COL2A1",1,0.025
+"EC","Mesenchymal cells","F_C7_MKI67",48,1.176
+"EC","Mesenchymal cells","F_C8_PLA2G2A",508,12.451
+"EC","Mesenchymal cells","Per_C1_RGS5",312,7.647
+"EC","Mesenchymal cells","Per_C2_MYH11",451,11.054
+"EC","Myeloid cells","M_C10_MKI67_Macro",407,5.986
+"EC","Myeloid cells","M_C11_MT1G_Macro",357,5.251
+"EC","Myeloid cells","M_C12_HSPA1A_Macro",41,0.603
+"EC","Myeloid cells","M_C13_MMP9_Macro",28,0.412
+"EC","Myeloid cells","M_C14_CD1C_cDC",342,5.03
+"EC","Myeloid cells","M_C15_LAMP3_cDC",169,2.486
+"EC","Myeloid cells","M_C16_LILRA4_pDC",332,4.883
+"EC","Myeloid cells","M_C17_S100A8_Neutro",1227,18.047
+"EC","Myeloid cells","M_C18_ISG15_Neutro",130,1.912
+"EC","Myeloid cells","M_C19_AZU1_Neutro",17,0.25
+"EC","Myeloid cells","M_C1_IL1B_Mono",683,10.046
+"EC","Myeloid cells","M_C2_S100A8_Mono",21,0.309
+"EC","Myeloid cells","M_C3_FCGR3A_Mono",101,1.486
+"EC","Myeloid cells","M_C4_VCAN_Mono",60,0.882
+"EC","Myeloid cells","M_C5_CCL3_C1QA_Macro",1105,16.252
+"EC","Myeloid cells","M_C6_SPP1_Macro",1006,14.796
+"EC","Myeloid cells","M_C7_TREM2_Macro",422,6.207
+"EC","Myeloid cells","M_C8_BMP2K_Macro",17,0.25
+"EC","Myeloid cells","M_C9_ISG15_Macro",334,4.912
+"EC","Plasma cells","PC_C1_TXNDC5",19,8.297
+"EC","Plasma cells","PC_C2_GMDS",4,1.747
+"EC","Plasma cells","PC_C5_HSPA1A",17,7.424
+"EC","Plasma cells","PC_C8_IGHG",188,82.096
+"EC","Plasma cells","PC_C9_IGHA",1,0.437
+"EC","T and NK cells","CD4T_C1_CCR7_Tn",706,13.154
+"EC","T and NK cells","CD4T_C2_FOXP3_Treg",629,11.72
+"EC","T and NK cells","CD4T_C3_BACH2",41,0.764
+"EC","T and NK cells","CD4T_C4_CXCL13",405,7.546
+"EC","T and NK cells","CD4T_C5_TOX",3,0.056
+"EC","T and NK cells","CD4T_C6_ISG15",66,1.23
+"EC","T and NK cells","CD8T_C1_HSPA1A",275,5.124
+"EC","T and NK cells","CD8T_C2_GZMK",831,15.484
+"EC","T and NK cells","CD8T_C3_PDCD1",359,6.689
+"EC","T and NK cells","CD8T_C4_XCL1",221,4.118
+"EC","T and NK cells","CD8T_C5_ISG15",200,3.726
+"EC","T and NK cells","CD8T_C6_TOX",10,0.186
+"EC","T and NK cells","CD8T_C7_MKI67",1250,23.29
+"EC","T and NK cells","NK_C1_FCGR3A",116,2.161
+"EC","T and NK cells","NK_C2_XCL1",138,2.571
+"EC","T and NK cells","NK_C3_HSPA1A",28,0.522
+"EC","T and NK cells","NK_C4_CX3CR1",14,0.261
+"EC","T and NK cells","NK_C5_KLRC2",8,0.149
+"EC","T and NK cells","NK_C6_NFKB1A",44,0.82
+"EC","T and NK cells","NK_C7_ISG15",23,0.429
+"GC","B cells","B_C10_LOMO2",487,2.62
+"GC","B cells","B_C11_MZB1_PC",5,0.027
+"GC","B cells","B_C1_CRIP1",5634,30.315
+"GC","B cells","B_C2_IGHM_Bn",6141,33.043
+"GC","B cells","B_C3_HSPA1A",3472,18.682
+"GC","B cells","B_C4_FCRL1",92,0.495
+"GC","B cells","B_C5_IFIT3",854,4.595
+"GC","B cells","B_C6_ZZF331",1590,8.555
+"GC","B cells","B_C7_MKI67",289,1.555
+"GC","B cells","B_C8_BACH2",16,0.086
+"GC","B cells","B_C9_IGLL5",5,0.027
+"GC","Endothelial cells","EC_C10_COL1A2",6,0.373
+"GC","Endothelial cells","EC_C11_RROX1",16,0.994
+"GC","Endothelial cells","EC_C12_FCN3",7,0.435
+"GC","Endothelial cells","EC_C13_MKI67",39,2.424
+"GC","Endothelial cells","EC_C1_IGFBP7",284,17.651
+"GC","Endothelial cells","EC_C2_GJA5",174,10.814
+"GC","Endothelial cells","EC_C3_HSPA1A",145,9.012
+"GC","Endothelial cells","EC_C4_FLT1",149,9.26
+"GC","Endothelial cells","EC_C5_ROBO2",143,8.888
+"GC","Endothelial cells","EC_C6_ACKR1",151,9.385
+"GC","Endothelial cells","EC_C7_IL6",182,11.311
+"GC","Endothelial cells","EC_C8_IL32",143,8.888
+"GC","Endothelial cells","EC_C9_CXCR4",170,10.566
+"GC","Epithelial cells","Epithelial",2844,100
+"GC","Mast cells","Mast",1802,100
+"GC","Mesenchymal cells","F_C1_MMP11",1798,40.071
+"GC","Mesenchymal cells","F_C2_MIF",769,17.138
+"GC","Mesenchymal cells","F_C3_CXCL12",15,0.334
+"GC","Mesenchymal cells","F_C4_IGF1",1242,27.68
+"GC","Mesenchymal cells","F_C5_SPP1",5,0.111
+"GC","Mesenchymal cells","F_C6_COL2A1",83,1.85
+"GC","Mesenchymal cells","F_C7_MKI67",69,1.538
+"GC","Mesenchymal cells","Per_C1_RGS5",329,7.332
+"GC","Mesenchymal cells","Per_C2_MYH11",177,3.945
+"GC","Myeloid cells","M_C10_MKI67_Macro",124,2.736
+"GC","Myeloid cells","M_C11_MT1G_Macro",27,0.596
+"GC","Myeloid cells","M_C12_HSPA1A_Macro",48,1.059
+"GC","Myeloid cells","M_C13_MMP9_Macro",16,0.353
+"GC","Myeloid cells","M_C14_CD1C_cDC",323,7.127
+"GC","Myeloid cells","M_C15_LAMP3_cDC",246,5.428
+"GC","Myeloid cells","M_C16_LILRA4_pDC",137,3.023
+"GC","Myeloid cells","M_C17_S100A8_Neutro",523,11.54
+"GC","Myeloid cells","M_C18_ISG15_Neutro",20,0.441
+"GC","Myeloid cells","M_C19_AZU1_Neutro",23,0.508
+"GC","Myeloid cells","M_C1_IL1B_Mono",410,9.047
+"GC","Myeloid cells","M_C2_S100A8_Mono",73,1.611
+"GC","Myeloid cells","M_C3_FCGR3A_Mono",92,2.03
+"GC","Myeloid cells","M_C4_VCAN_Mono",5,0.11
+"GC","Myeloid cells","M_C5_CCL3_C1QA_Macro",1084,23.919
+"GC","Myeloid cells","M_C6_SPP1_Macro",1018,22.462
+"GC","Myeloid cells","M_C7_TREM2_Macro",230,5.075
+"GC","Myeloid cells","M_C8_BMP2K_Macro",3,0.066
+"GC","Myeloid cells","M_C9_ISG15_Macro",130,2.868
+"GC","Plasma cells","PC_C1_TXNDC5",5621,38.35
+"GC","Plasma cells","PC_C2_GMDS",127,0.866
+"GC","Plasma cells","PC_C3_IGHGP",1516,10.343
+"GC","Plasma cells","PC_C4_CD79A",2395,16.34
+"GC","Plasma cells","PC_C5_HSPA1A",1531,10.446
+"GC","Plasma cells","PC_C6_SELK",1423,9.709
+"GC","Plasma cells","PC_C7_HLA-DRA",1620,11.053
+"GC","Plasma cells","PC_C8_IGHG",56,0.382
+"GC","Plasma cells","PC_C9_IGHA",368,2.511
+"GC","T and NK cells","CD4T_C1_CCR7_Tn",13660,17.601
+"GC","T and NK cells","CD4T_C2_FOXP3_Treg",9790,12.614
+"GC","T and NK cells","CD4T_C3_BACH2",1441,1.857
+"GC","T and NK cells","CD4T_C4_CXCL13",5377,6.928
+"GC","T and NK cells","CD4T_C5_TOX",477,0.615
+"GC","T and NK cells","CD4T_C6_ISG15",415,0.535
+"GC","T and NK cells","CD8T_C1_HSPA1A",7818,10.073
+"GC","T and NK cells","CD8T_C2_GZMK",15484,19.951
+"GC","T and NK cells","CD8T_C3_PDCD1",4733,6.098
+"GC","T and NK cells","CD8T_C4_XCL1",6752,8.7
+"GC","T and NK cells","CD8T_C5_ISG15",2463,3.174
+"GC","T and NK cells","CD8T_C6_TOX",126,0.162
+"GC","T and NK cells","CD8T_C7_MKI67",3256,4.195
+"GC","T and NK cells","NK_C1_FCGR3A",1439,1.854
+"GC","T and NK cells","NK_C2_XCL1",1428,1.84
+"GC","T and NK cells","NK_C3_HSPA1A",1052,1.355
+"GC","T and NK cells","NK_C4_CX3CR1",34,0.044
+"GC","T and NK cells","NK_C5_KLRC2",37,0.048
+"GC","T and NK cells","NK_C6_NFKB1A",677,0.872
+"GC","T and NK cells","NK_C7_ISG15",163,0.21
+"GC","T and NK cells","NK_C8_CREM",988,1.273
+"HCC","B cells","B_C1_CRIP1",176,51.312
+"HCC","B cells","B_C2_IGHM_Bn",76,22.157
+"HCC","B cells","B_C3_HSPA1A",69,20.117
+"HCC","B cells","B_C5_IFIT3",19,5.539
+"HCC","B cells","B_C7_MKI67",2,0.583
+"HCC","B cells","B_C9_IGLL5",1,0.292
+"HCC","Endothelial cells","EC_C10_COL1A2",117,5.556
+"HCC","Endothelial cells","EC_C11_RROX1",6,0.285
+"HCC","Endothelial cells","EC_C12_FCN3",48,2.279
+"HCC","Endothelial cells","EC_C13_MKI67",72,3.419
+"HCC","Endothelial cells","EC_C1_IGFBP7",782,37.132
+"HCC","Endothelial cells","EC_C2_GJA5",452,21.462
+"HCC","Endothelial cells","EC_C3_HSPA1A",128,6.078
+"HCC","Endothelial cells","EC_C4_FLT1",42,1.994
+"HCC","Endothelial cells","EC_C5_ROBO2",27,1.282
+"HCC","Endothelial cells","EC_C6_ACKR1",82,3.894
+"HCC","Endothelial cells","EC_C7_IL6",47,2.232
+"HCC","Endothelial cells","EC_C8_IL32",125,5.935
+"HCC","Endothelial cells","EC_C9_CXCR4",178,8.452
+"HCC","Epithelial cells","Epithelial",11866,100
+"HCC","Mast cells","Mast",83,100
+"HCC","Mesenchymal cells","F_C1_MMP11",695,24.403
+"HCC","Mesenchymal cells","F_C2_MIF",1227,43.083
+"HCC","Mesenchymal cells","F_C3_CXCL12",1,0.035
+"HCC","Mesenchymal cells","F_C4_IGF1",231,8.111
+"HCC","Mesenchymal cells","F_C6_COL2A1",14,0.492
+"HCC","Mesenchymal cells","F_C7_MKI67",58,2.037
+"HCC","Mesenchymal cells","F_C8_PLA2G2A",1,0.035
+"HCC","Mesenchymal cells","Per_C1_RGS5",362,12.711
+"HCC","Mesenchymal cells","Per_C2_MYH11",259,9.094
+"HCC","Myeloid cells","M_C10_MKI67_Macro",270,3.809
+"HCC","Myeloid cells","M_C11_MT1G_Macro",88,1.241
+"HCC","Myeloid cells","M_C12_HSPA1A_Macro",116,1.636
+"HCC","Myeloid cells","M_C13_MMP9_Macro",58,0.818
+"HCC","Myeloid cells","M_C14_CD1C_cDC",343,4.838
+"HCC","Myeloid cells","M_C15_LAMP3_cDC",138,1.947
+"HCC","Myeloid cells","M_C16_LILRA4_pDC",40,0.564
+"HCC","Myeloid cells","M_C17_S100A8_Neutro",1079,15.221
+"HCC","Myeloid cells","M_C18_ISG15_Neutro",61,0.86
+"HCC","Myeloid cells","M_C19_AZU1_Neutro",4,0.056
+"HCC","Myeloid cells","M_C1_IL1B_Mono",456,6.433
+"HCC","Myeloid cells","M_C2_S100A8_Mono",9,0.127
+"HCC","Myeloid cells","M_C3_FCGR3A_Mono",47,0.663
+"HCC","Myeloid cells","M_C4_VCAN_Mono",2,0.028
+"HCC","Myeloid cells","M_C5_CCL3_C1QA_Macro",2118,29.877
+"HCC","Myeloid cells","M_C6_SPP1_Macro",1573,22.189
+"HCC","Myeloid cells","M_C7_TREM2_Macro",435,6.136
+"HCC","Myeloid cells","M_C9_ISG15_Macro",252,3.555
+"HCC","Plasma cells","PC_C1_TXNDC5",253,22.019
+"HCC","Plasma cells","PC_C3_IGHGP",3,0.261
+"HCC","Plasma cells","PC_C4_CD79A",4,0.348
+"HCC","Plasma cells","PC_C5_HSPA1A",77,6.701
+"HCC","Plasma cells","PC_C8_IGHG",811,70.583
+"HCC","Plasma cells","PC_C9_IGHA",1,0.087
+"HCC","T and NK cells","CD4T_C1_CCR7_Tn",1874,16.152
+"HCC","T and NK cells","CD4T_C2_FOXP3_Treg",1573,13.558
+"HCC","T and NK cells","CD4T_C3_BACH2",46,0.396
+"HCC","T and NK cells","CD4T_C4_CXCL13",381,3.284
+"HCC","T and NK cells","CD4T_C5_TOX",16,0.138
+"HCC","T and NK cells","CD4T_C6_ISG15",53,0.457
+"HCC","T and NK cells","CD8T_C1_HSPA1A",1424,12.274
+"HCC","T and NK cells","CD8T_C2_GZMK",1430,12.325
+"HCC","T and NK cells","CD8T_C3_PDCD1",994,8.567
+"HCC","T and NK cells","CD8T_C4_XCL1",624,5.378
+"HCC","T and NK cells","CD8T_C5_ISG15",355,3.06
+"HCC","T and NK cells","CD8T_C6_TOX",13,0.112
+"HCC","T and NK cells","CD8T_C7_MKI67",1343,11.576
+"HCC","T and NK cells","NK_C1_FCGR3A",714,6.154
+"HCC","T and NK cells","NK_C2_XCL1",272,2.344
+"HCC","T and NK cells","NK_C3_HSPA1A",412,3.551
+"HCC","T and NK cells","NK_C4_CX3CR1",4,0.034
+"HCC","T and NK cells","NK_C6_NFKB1A",44,0.379
+"HCC","T and NK cells","NK_C7_ISG15",30,0.259
+"KC","B cells","B_C10_LOMO2",26,0.372
+"KC","B cells","B_C11_MZB1_PC",127,1.819
+"KC","B cells","B_C1_CRIP1",1237,17.72
+"KC","B cells","B_C2_IGHM_Bn",1136,16.273
+"KC","B cells","B_C3_HSPA1A",407,5.83
+"KC","B cells","B_C4_FCRL1",3247,46.512
+"KC","B cells","B_C5_IFIT3",72,1.031
+"KC","B cells","B_C7_MKI67",140,2.005
+"KC","B cells","B_C8_BACH2",309,4.426
+"KC","B cells","B_C9_IGLL5",280,4.011
+"KC","Endothelial cells","EC_C10_COL1A2",264,5.208
+"KC","Endothelial cells","EC_C11_RROX1",27,0.533
+"KC","Endothelial cells","EC_C12_FCN3",42,0.829
+"KC","Endothelial cells","EC_C13_MKI67",30,0.592
+"KC","Endothelial cells","EC_C1_IGFBP7",1314,25.922
+"KC","Endothelial cells","EC_C2_GJA5",580,11.442
+"KC","Endothelial cells","EC_C3_HSPA1A",513,10.12
+"KC","Endothelial cells","EC_C4_FLT1",653,12.882
+"KC","Endothelial cells","EC_C5_ROBO2",357,7.043
+"KC","Endothelial cells","EC_C6_ACKR1",398,7.852
+"KC","Endothelial cells","EC_C7_IL6",347,6.846
+"KC","Endothelial cells","EC_C8_IL32",303,5.978
+"KC","Endothelial cells","EC_C9_CXCR4",241,4.754
+"KC","Epithelial cells","Epithelial",8050,100
+"KC","Mast cells","Mast",1483,100
+"KC","Mesenchymal cells","F_C1_MMP11",1530,19.018
+"KC","Mesenchymal cells","F_C2_MIF",1161,14.431
+"KC","Mesenchymal cells","F_C3_CXCL12",1005,12.492
+"KC","Mesenchymal cells","F_C4_IGF1",528,6.563
+"KC","Mesenchymal cells","F_C5_SPP1",171,2.126
+"KC","Mesenchymal cells","F_C6_COL2A1",24,0.298
+"KC","Mesenchymal cells","F_C7_MKI67",34,0.423
+"KC","Mesenchymal cells","Per_C1_RGS5",2315,28.776
+"KC","Mesenchymal cells","Per_C2_MYH11",1277,15.873
+"KC","Myeloid cells","M_C10_MKI67_Macro",426,1.127
+"KC","Myeloid cells","M_C11_MT1G_Macro",216,0.571
+"KC","Myeloid cells","M_C12_HSPA1A_Macro",378,1
+"KC","Myeloid cells","M_C13_MMP9_Macro",60,0.159
+"KC","Myeloid cells","M_C14_CD1C_cDC",1551,4.104
+"KC","Myeloid cells","M_C15_LAMP3_cDC",465,1.23
+"KC","Myeloid cells","M_C16_LILRA4_pDC",928,2.455
+"KC","Myeloid cells","M_C17_S100A8_Neutro",7265,19.221
+"KC","Myeloid cells","M_C18_ISG15_Neutro",447,1.183
+"KC","Myeloid cells","M_C19_AZU1_Neutro",379,1.003
+"KC","Myeloid cells","M_C1_IL1B_Mono",6919,18.306
+"KC","Myeloid cells","M_C20_CXCL8_Neutro",566,1.497
+"KC","Myeloid cells","M_C2_S100A8_Mono",308,0.815
+"KC","Myeloid cells","M_C3_FCGR3A_Mono",1835,4.855
+"KC","Myeloid cells","M_C4_VCAN_Mono",1335,3.532
+"KC","Myeloid cells","M_C5_CCL3_C1QA_Macro",6013,15.909
+"KC","Myeloid cells","M_C6_SPP1_Macro",3791,10.03
+"KC","Myeloid cells","M_C7_TREM2_Macro",1999,5.289
+"KC","Myeloid cells","M_C8_BMP2K_Macro",2173,5.749
+"KC","Myeloid cells","M_C9_ISG15_Macro",743,1.966
+"KC","Plasma cells","PC_C1_TXNDC5",398,25.911
+"KC","Plasma cells","PC_C2_GMDS",528,34.375
+"KC","Plasma cells","PC_C3_IGHGP",255,16.602
+"KC","Plasma cells","PC_C4_CD79A",2,0.13
+"KC","Plasma cells","PC_C5_HSPA1A",71,4.622
+"KC","Plasma cells","PC_C7_HLA-DRA",7,0.456
+"KC","Plasma cells","PC_C8_IGHG",261,16.992
+"KC","Plasma cells","PC_C9_IGHA",14,0.911
+"KC","T and NK cells","CD4T_C1_CCR7_Tn",9333,10.896
+"KC","T and NK cells","CD4T_C2_FOXP3_Treg",4513,5.269
+"KC","T and NK cells","CD4T_C3_BACH2",13543,15.811
+"KC","T and NK cells","CD4T_C4_CXCL13",1823,2.128
+"KC","T and NK cells","CD4T_C5_TOX",1687,1.97
+"KC","T and NK cells","CD4T_C6_ISG15",208,0.243
+"KC","T and NK cells","CD8T_C1_HSPA1A",5755,6.719
+"KC","T and NK cells","CD8T_C2_GZMK",10375,12.113
+"KC","T and NK cells","CD8T_C3_PDCD1",9072,10.592
+"KC","T and NK cells","CD8T_C4_XCL1",3681,4.298
+"KC","T and NK cells","CD8T_C5_ISG15",1302,1.52
+"KC","T and NK cells","CD8T_C6_TOX",6892,8.046
+"KC","T and NK cells","CD8T_C7_MKI67",4379,5.112
+"KC","T and NK cells","NK_C1_FCGR3A",2013,2.35
+"KC","T and NK cells","NK_C2_XCL1",2575,3.006
+"KC","T and NK cells","NK_C3_HSPA1A",1323,1.545
+"KC","T and NK cells","NK_C4_CX3CR1",4679,5.463
+"KC","T and NK cells","NK_C5_KLRC2",1872,2.186
+"KC","T and NK cells","NK_C6_NFKB1A",490,0.572
+"KC","T and NK cells","NK_C7_ISG15",138,0.161
+"LC","B cells","B_C10_LOMO2",9,0.091
+"LC","B cells","B_C11_MZB1_PC",73,0.739
+"LC","B cells","B_C1_CRIP1",3465,35.089
+"LC","B cells","B_C2_IGHM_Bn",2476,25.073
+"LC","B cells","B_C3_HSPA1A",2305,23.342
+"LC","B cells","B_C4_FCRL1",884,8.952
+"LC","B cells","B_C5_IFIT3",312,3.159
+"LC","B cells","B_C6_ZZF331",3,0.03
+"LC","B cells","B_C7_MKI67",110,1.114
+"LC","B cells","B_C8_BACH2",158,1.6
+"LC","B cells","B_C9_IGLL5",80,0.81
+"LC","Endothelial cells","EC_C10_COL1A2",98,2.889
+"LC","Endothelial cells","EC_C11_RROX1",93,2.742
+"LC","Endothelial cells","EC_C12_FCN3",17,0.501
+"LC","Endothelial cells","EC_C13_MKI67",10,0.295
+"LC","Endothelial cells","EC_C1_IGFBP7",417,12.294
+"LC","Endothelial cells","EC_C2_GJA5",126,3.715
+"LC","Endothelial cells","EC_C3_HSPA1A",1451,42.777
+"LC","Endothelial cells","EC_C4_FLT1",47,1.386
+"LC","Endothelial cells","EC_C5_ROBO2",84,2.476
+"LC","Endothelial cells","EC_C6_ACKR1",173,5.1
+"LC","Endothelial cells","EC_C7_IL6",241,7.105
+"LC","Endothelial cells","EC_C8_IL32",68,2.005
+"LC","Endothelial cells","EC_C9_CXCR4",567,16.716
+"LC","Epithelial cells","Epithelial",5695,100
+"LC","Mast cells","Mast",7319,100
+"LC","Mesenchymal cells","F_C1_MMP11",408,18.63
+"LC","Mesenchymal cells","F_C2_MIF",218,9.954
+"LC","Mesenchymal cells","F_C3_CXCL12",356,16.256
+"LC","Mesenchymal cells","F_C4_IGF1",547,24.977
+"LC","Mesenchymal cells","F_C5_SPP1",216,9.863
+"LC","Mesenchymal cells","F_C6_COL2A1",16,0.731
+"LC","Mesenchymal cells","F_C7_MKI67",13,0.594
+"LC","Mesenchymal cells","F_C8_PLA2G2A",75,3.425
+"LC","Mesenchymal cells","Per_C1_RGS5",191,8.721
+"LC","Mesenchymal cells","Per_C2_MYH11",150,6.849
+"LC","Myeloid cells","M_C10_MKI67_Macro",538,2.492
+"LC","Myeloid cells","M_C11_MT1G_Macro",556,2.575
+"LC","Myeloid cells","M_C12_HSPA1A_Macro",276,1.278
+"LC","Myeloid cells","M_C13_MMP9_Macro",56,0.259
+"LC","Myeloid cells","M_C14_CD1C_cDC",2216,10.264
+"LC","Myeloid cells","M_C15_LAMP3_cDC",460,2.131
+"LC","Myeloid cells","M_C16_LILRA4_pDC",493,2.283
+"LC","Myeloid cells","M_C17_S100A8_Neutro",2192,10.153
+"LC","Myeloid cells","M_C18_ISG15_Neutro",105,0.486
+"LC","Myeloid cells","M_C19_AZU1_Neutro",1106,5.123
+"LC","Myeloid cells","M_C1_IL1B_Mono",3076,14.247
+"LC","Myeloid cells","M_C20_CXCL8_Neutro",1,0.005
+"LC","Myeloid cells","M_C2_S100A8_Mono",159,0.736
+"LC","Myeloid cells","M_C3_FCGR3A_Mono",586,2.714
+"LC","Myeloid cells","M_C4_VCAN_Mono",534,2.473
+"LC","Myeloid cells","M_C5_CCL3_C1QA_Macro",3085,14.289
+"LC","Myeloid cells","M_C6_SPP1_Macro",3909,18.106
+"LC","Myeloid cells","M_C7_TREM2_Macro",1595,7.388
+"LC","Myeloid cells","M_C8_BMP2K_Macro",445,2.061
+"LC","Myeloid cells","M_C9_ISG15_Macro",202,0.936
+"LC","Plasma cells","PC_C1_TXNDC5",749,51.442
+"LC","Plasma cells","PC_C2_GMDS",125,8.585
+"LC","Plasma cells","PC_C3_IGHGP",127,8.723
+"LC","Plasma cells","PC_C4_CD79A",29,1.992
+"LC","Plasma cells","PC_C5_HSPA1A",314,21.566
+"LC","Plasma cells","PC_C6_SELK",2,0.137
+"LC","Plasma cells","PC_C7_HLA-DRA",1,0.069
+"LC","Plasma cells","PC_C8_IGHG",83,5.701
+"LC","Plasma cells","PC_C9_IGHA",26,1.786
+"LC","T and NK cells","CD4T_C1_CCR7_Tn",10446,21.591
+"LC","T and NK cells","CD4T_C2_FOXP3_Treg",4511,9.324
+"LC","T and NK cells","CD4T_C3_BACH2",3047,6.298
+"LC","T and NK cells","CD4T_C4_CXCL13",2008,4.15
+"LC","T and NK cells","CD4T_C5_TOX",630,1.302
+"LC","T and NK cells","CD4T_C6_ISG15",132,0.273
+"LC","T and NK cells","CD8T_C1_HSPA1A",5339,11.035
+"LC","T and NK cells","CD8T_C2_GZMK",7158,14.795
+"LC","T and NK cells","CD8T_C3_PDCD1",1714,3.543
+"LC","T and NK cells","CD8T_C4_XCL1",3300,6.821
+"LC","T and NK cells","CD8T_C5_ISG15",771,1.594
+"LC","T and NK cells","CD8T_C6_TOX",941,1.945
+"LC","T and NK cells","CD8T_C7_MKI67",1225,2.532
+"LC","T and NK cells","NK_C1_FCGR3A",2380,4.919
+"LC","T and NK cells","NK_C2_XCL1",1051,2.172
+"LC","T and NK cells","NK_C3_HSPA1A",2256,4.663
+"LC","T and NK cells","NK_C4_CX3CR1",716,1.48
+"LC","T and NK cells","NK_C5_KLRC2",262,0.542
+"LC","T and NK cells","NK_C6_NFKB1A",429,0.887
+"LC","T and NK cells","NK_C7_ISG15",65,0.134
+"NPC","B cells","B_C10_LOMO2",134,1.067
+"NPC","B cells","B_C1_CRIP1",3687,29.362
+"NPC","B cells","B_C2_IGHM_Bn",2225,17.719
+"NPC","B cells","B_C3_HSPA1A",3750,29.864
+"NPC","B cells","B_C5_IFIT3",2411,19.2
+"NPC","B cells","B_C6_ZZF331",287,2.286
+"NPC","B cells","B_C7_MKI67",39,0.311
+"NPC","B cells","B_C9_IGLL5",24,0.191
+"NPC","Endothelial cells","EC_C10_COL1A2",2,7.692
+"NPC","Endothelial cells","EC_C1_IGFBP7",5,19.231
+"NPC","Endothelial cells","EC_C4_FLT1",3,11.538
+"NPC","Endothelial cells","EC_C5_ROBO2",2,7.692
+"NPC","Endothelial cells","EC_C6_ACKR1",2,7.692
+"NPC","Endothelial cells","EC_C7_IL6",3,11.538
+"NPC","Endothelial cells","EC_C8_IL32",5,19.231
+"NPC","Endothelial cells","EC_C9_CXCR4",4,15.385
+"NPC","Epithelial cells","Epithelial",2505,100
+"NPC","Mast cells","Mast",310,100
+"NPC","Mesenchymal cells","F_C1_MMP11",304,47.278
+"NPC","Mesenchymal cells","F_C2_MIF",148,23.017
+"NPC","Mesenchymal cells","F_C4_IGF1",82,12.753
+"NPC","Mesenchymal cells","F_C6_COL2A1",2,0.311
+"NPC","Mesenchymal cells","F_C7_MKI67",10,1.555
+"NPC","Mesenchymal cells","Per_C1_RGS5",69,10.731
+"NPC","Mesenchymal cells","Per_C2_MYH11",28,4.355
+"NPC","Myeloid cells","M_C10_MKI67_Macro",50,1.309
+"NPC","Myeloid cells","M_C11_MT1G_Macro",50,1.309
+"NPC","Myeloid cells","M_C12_HSPA1A_Macro",77,2.016
+"NPC","Myeloid cells","M_C13_MMP9_Macro",8,0.209
+"NPC","Myeloid cells","M_C14_CD1C_cDC",832,21.78
+"NPC","Myeloid cells","M_C15_LAMP3_cDC",210,5.497
+"NPC","Myeloid cells","M_C16_LILRA4_pDC",503,13.168
+"NPC","Myeloid cells","M_C17_S100A8_Neutro",284,7.435
+"NPC","Myeloid cells","M_C18_ISG15_Neutro",113,2.958
+"NPC","Myeloid cells","M_C19_AZU1_Neutro",7,0.183
+"NPC","Myeloid cells","M_C1_IL1B_Mono",354,9.267
+"NPC","Myeloid cells","M_C2_S100A8_Mono",1,0.026
+"NPC","Myeloid cells","M_C3_FCGR3A_Mono",28,0.733
+"NPC","Myeloid cells","M_C4_VCAN_Mono",1,0.026
+"NPC","Myeloid cells","M_C5_CCL3_C1QA_Macro",344,9.005
+"NPC","Myeloid cells","M_C6_SPP1_Macro",439,11.492
+"NPC","Myeloid cells","M_C7_TREM2_Macro",143,3.743
+"NPC","Myeloid cells","M_C8_BMP2K_Macro",8,0.209
+"NPC","Myeloid cells","M_C9_ISG15_Macro",368,9.634
+"NPC","Plasma cells","PC_C1_TXNDC5",144,18.997
+"NPC","Plasma cells","PC_C3_IGHGP",1,0.132
+"NPC","Plasma cells","PC_C4_CD79A",204,26.913
+"NPC","Plasma cells","PC_C5_HSPA1A",186,24.538
+"NPC","Plasma cells","PC_C6_SELK",127,16.755
+"NPC","Plasma cells","PC_C8_IGHG",87,11.478
+"NPC","Plasma cells","PC_C9_IGHA",9,1.187
+"NPC","T and NK cells","CD4T_C1_CCR7_Tn",5884,9.563
+"NPC","T and NK cells","CD4T_C2_FOXP3_Treg",8599,13.975
+"NPC","T and NK cells","CD4T_C3_BACH2",77,0.125
+"NPC","T and NK cells","CD4T_C4_CXCL13",3381,5.495
+"NPC","T and NK cells","CD4T_C5_TOX",92,0.15
+"NPC","T and NK cells","CD4T_C6_ISG15",1865,3.031
+"NPC","T and NK cells","CD8T_C1_HSPA1A",6690,10.873
+"NPC","T and NK cells","CD8T_C2_GZMK",10981,17.846
+"NPC","T and NK cells","CD8T_C3_PDCD1",4796,7.794
+"NPC","T and NK cells","CD8T_C4_XCL1",4242,6.894
+"NPC","T and NK cells","CD8T_C5_ISG15",7144,11.61
+"NPC","T and NK cells","CD8T_C6_TOX",20,0.033
+"NPC","T and NK cells","CD8T_C7_MKI67",4431,7.201
+"NPC","T and NK cells","NK_C1_FCGR3A",608,0.988
+"NPC","T and NK cells","NK_C2_XCL1",748,1.216
+"NPC","T and NK cells","NK_C3_HSPA1A",582,0.946
+"NPC","T and NK cells","NK_C4_CX3CR1",1,0.002
+"NPC","T and NK cells","NK_C5_KLRC2",3,0.005
+"NPC","T and NK cells","NK_C6_NFKB1A",303,0.492
+"NPC","T and NK cells","NK_C7_ISG15",971,1.578
+"NPC","T and NK cells","NK_C8_CREM",113,0.184
+"PC","B cells","B_C1_CRIP1",342,40.714
+"PC","B cells","B_C2_IGHM_Bn",165,19.643
+"PC","B cells","B_C3_HSPA1A",294,35
+"PC","B cells","B_C5_IFIT3",25,2.976
+"PC","B cells","B_C6_ZZF331",8,0.952
+"PC","B cells","B_C7_MKI67",3,0.357
+"PC","B cells","B_C8_BACH2",1,0.119
+"PC","B cells","B_C9_IGLL5",2,0.238
+"PC","Endothelial cells","EC_C10_COL1A2",106,1.455
+"PC","Endothelial cells","EC_C11_RROX1",109,1.497
+"PC","Endothelial cells","EC_C12_FCN3",25,0.343
+"PC","Endothelial cells","EC_C13_MKI67",135,1.854
+"PC","Endothelial cells","EC_C1_IGFBP7",1984,27.242
+"PC","Endothelial cells","EC_C2_GJA5",1089,14.953
+"PC","Endothelial cells","EC_C3_HSPA1A",513,7.044
+"PC","Endothelial cells","EC_C4_FLT1",917,12.591
+"PC","Endothelial cells","EC_C5_ROBO2",533,7.318
+"PC","Endothelial cells","EC_C6_ACKR1",769,10.559
+"PC","Endothelial cells","EC_C7_IL6",456,6.261
+"PC","Endothelial cells","EC_C8_IL32",552,7.579
+"PC","Endothelial cells","EC_C9_CXCR4",95,1.304
+"PC","Epithelial cells","Epithelial",16493,100
+"PC","Mast cells","Mast",1275,100
+"PC","Mesenchymal cells","F_C1_MMP11",2639,32.848
+"PC","Mesenchymal cells","F_C2_MIF",1208,15.036
+"PC","Mesenchymal cells","F_C3_CXCL12",2,0.025
+"PC","Mesenchymal cells","F_C4_IGF1",796,9.908
+"PC","Mesenchymal cells","F_C5_SPP1",28,0.349
+"PC","Mesenchymal cells","F_C6_COL2A1",290,3.61
+"PC","Mesenchymal cells","F_C7_MKI67",209,2.601
+"PC","Mesenchymal cells","Per_C1_RGS5",2152,26.786
+"PC","Mesenchymal cells","Per_C2_MYH11",710,8.837
+"PC","Myeloid cells","M_C10_MKI67_Macro",190,2.048
+"PC","Myeloid cells","M_C11_MT1G_Macro",274,2.954
+"PC","Myeloid cells","M_C12_HSPA1A_Macro",268,2.889
+"PC","Myeloid cells","M_C13_MMP9_Macro",103,1.11
+"PC","Myeloid cells","M_C14_CD1C_cDC",577,6.22
+"PC","Myeloid cells","M_C15_LAMP3_cDC",112,1.207
+"PC","Myeloid cells","M_C16_LILRA4_pDC",15,0.162
+"PC","Myeloid cells","M_C17_S100A8_Neutro",1760,18.972
+"PC","Myeloid cells","M_C18_ISG15_Neutro",92,0.992
+"PC","Myeloid cells","M_C19_AZU1_Neutro",8,0.086
+"PC","Myeloid cells","M_C1_IL1B_Mono",536,5.778
+"PC","Myeloid cells","M_C2_S100A8_Mono",41,0.442
+"PC","Myeloid cells","M_C3_FCGR3A_Mono",75,0.808
+"PC","Myeloid cells","M_C4_VCAN_Mono",1,0.011
+"PC","Myeloid cells","M_C5_CCL3_C1QA_Macro",2522,27.186
+"PC","Myeloid cells","M_C6_SPP1_Macro",1648,17.764
+"PC","Myeloid cells","M_C7_TREM2_Macro",935,10.079
+"PC","Myeloid cells","M_C8_BMP2K_Macro",6,0.065
+"PC","Myeloid cells","M_C9_ISG15_Macro",114,1.229
+"PC","Plasma cells","PC_C1_TXNDC5",52,54.737
+"PC","Plasma cells","PC_C3_IGHGP",7,7.368
+"PC","Plasma cells","PC_C4_CD79A",5,5.263
+"PC","Plasma cells","PC_C5_HSPA1A",14,14.737
+"PC","Plasma cells","PC_C6_SELK",6,6.316
+"PC","Plasma cells","PC_C8_IGHG",10,10.526
+"PC","Plasma cells","PC_C9_IGHA",1,1.053
+"PC","T and NK cells","CD4T_C1_CCR7_Tn",3781,13.552
+"PC","T and NK cells","CD4T_C2_FOXP3_Treg",1628,5.835
+"PC","T and NK cells","CD4T_C3_BACH2",69,0.247
+"PC","T and NK cells","CD4T_C4_CXCL13",423,1.516
+"PC","T and NK cells","CD4T_C5_TOX",8,0.029
+"PC","T and NK cells","CD4T_C6_ISG15",30,0.108
+"PC","T and NK cells","CD8T_C1_HSPA1A",7862,28.18
+"PC","T and NK cells","CD8T_C2_GZMK",6565,23.531
+"PC","T and NK cells","CD8T_C3_PDCD1",811,2.907
+"PC","T and NK cells","CD8T_C4_XCL1",2457,8.807
+"PC","T and NK cells","CD8T_C5_ISG15",362,1.298
+"PC","T and NK cells","CD8T_C6_TOX",15,0.054
+"PC","T and NK cells","CD8T_C7_MKI67",1041,3.731
+"PC","T and NK cells","NK_C1_FCGR3A",1102,3.95
+"PC","T and NK cells","NK_C2_XCL1",755,2.706
+"PC","T and NK cells","NK_C3_HSPA1A",756,2.71
+"PC","T and NK cells","NK_C4_CX3CR1",2,0.007
+"PC","T and NK cells","NK_C5_KLRC2",1,0.004
+"PC","T and NK cells","NK_C6_NFKB1A",194,0.695
+"PC","T and NK cells","NK_C7_ISG15",35,0.125
+"PC","T and NK cells","NK_C8_CREM",2,0.007
+"TC","B cells","B_C1_CRIP1",46,23.711
+"TC","B cells","B_C2_IGHM_Bn",45,23.196
+"TC","B cells","B_C3_HSPA1A",57,29.381
+"TC","B cells","B_C4_FCRL1",44,22.68
+"TC","B cells","B_C5_IFIT3",1,0.515
+"TC","B cells","B_C7_MKI67",1,0.515
+"TC","Endothelial cells","EC_C10_COL1A2",69,1.415
+"TC","Endothelial cells","EC_C11_RROX1",305,6.256
+"TC","Endothelial cells","EC_C12_FCN3",8,0.164
+"TC","Endothelial cells","EC_C13_MKI67",44,0.903
+"TC","Endothelial cells","EC_C1_IGFBP7",1279,26.236
+"TC","Endothelial cells","EC_C2_GJA5",607,12.451
+"TC","Endothelial cells","EC_C3_HSPA1A",285,5.846
+"TC","Endothelial cells","EC_C4_FLT1",1492,30.605
+"TC","Endothelial cells","EC_C5_ROBO2",269,5.518
+"TC","Endothelial cells","EC_C6_ACKR1",91,1.867
+"TC","Endothelial cells","EC_C7_IL6",46,0.944
+"TC","Endothelial cells","EC_C8_IL32",346,7.097
+"TC","Endothelial cells","EC_C9_CXCR4",34,0.697
+"TC","Epithelial cells","Epithelial",23147,100
+"TC","Mast cells","Mast",158,100
+"TC","Mesenchymal cells","F_C1_MMP11",669,19.77
+"TC","Mesenchymal cells","F_C2_MIF",638,18.853
+"TC","Mesenchymal cells","F_C3_CXCL12",13,0.384
+"TC","Mesenchymal cells","F_C4_IGF1",577,17.051
+"TC","Mesenchymal cells","F_C5_SPP1",21,0.621
+"TC","Mesenchymal cells","F_C6_COL2A1",83,2.453
+"TC","Mesenchymal cells","F_C7_MKI67",34,1.005
+"TC","Mesenchymal cells","Per_C1_RGS5",965,28.517
+"TC","Mesenchymal cells","Per_C2_MYH11",384,11.348
+"TC","Myeloid cells","M_C10_MKI67_Macro",75,1.247
+"TC","Myeloid cells","M_C11_MT1G_Macro",69,1.147
+"TC","Myeloid cells","M_C12_HSPA1A_Macro",163,2.71
+"TC","Myeloid cells","M_C13_MMP9_Macro",12,0.2
+"TC","Myeloid cells","M_C14_CD1C_cDC",318,5.287
+"TC","Myeloid cells","M_C15_LAMP3_cDC",84,1.397
+"TC","Myeloid cells","M_C16_LILRA4_pDC",13,0.216
+"TC","Myeloid cells","M_C17_S100A8_Neutro",2489,41.38
+"TC","Myeloid cells","M_C18_ISG15_Neutro",57,0.948
+"TC","Myeloid cells","M_C19_AZU1_Neutro",23,0.382
+"TC","Myeloid cells","M_C1_IL1B_Mono",507,8.429
+"TC","Myeloid cells","M_C2_S100A8_Mono",63,1.047
+"TC","Myeloid cells","M_C3_FCGR3A_Mono",272,4.522
+"TC","Myeloid cells","M_C4_VCAN_Mono",4,0.067
+"TC","Myeloid cells","M_C5_CCL3_C1QA_Macro",1082,17.988
+"TC","Myeloid cells","M_C6_SPP1_Macro",316,5.254
+"TC","Myeloid cells","M_C7_TREM2_Macro",354,5.885
+"TC","Myeloid cells","M_C8_BMP2K_Macro",66,1.097
+"TC","Myeloid cells","M_C9_ISG15_Macro",48,0.798
+"TC","Plasma cells","PC_C1_TXNDC5",29,19.333
+"TC","Plasma cells","PC_C2_GMDS",8,5.333
+"TC","Plasma cells","PC_C3_IGHGP",76,50.667
+"TC","Plasma cells","PC_C4_CD79A",1,0.667
+"TC","Plasma cells","PC_C5_HSPA1A",8,5.333
+"TC","Plasma cells","PC_C8_IGHG",21,14
+"TC","Plasma cells","PC_C9_IGHA",7,4.667
+"TC","T and NK cells","CD4T_C1_CCR7_Tn",756,6.965
+"TC","T and NK cells","CD4T_C2_FOXP3_Treg",1017,9.37
+"TC","T and NK cells","CD4T_C3_BACH2",976,8.992
+"TC","T and NK cells","CD4T_C4_CXCL13",146,1.345
+"TC","T and NK cells","CD4T_C5_TOX",507,4.671
+"TC","T and NK cells","CD4T_C6_ISG15",42,0.387
+"TC","T and NK cells","CD8T_C1_HSPA1A",915,8.43
+"TC","T and NK cells","CD8T_C2_GZMK",1168,10.761
+"TC","T and NK cells","CD8T_C3_PDCD1",1232,11.351
+"TC","T and NK cells","CD8T_C4_XCL1",605,5.574
+"TC","T and NK cells","CD8T_C5_ISG15",105,0.967
+"TC","T and NK cells","CD8T_C6_TOX",829,7.638
+"TC","T and NK cells","CD8T_C7_MKI67",515,4.745
+"TC","T and NK cells","NK_C1_FCGR3A",796,7.334
+"TC","T and NK cells","NK_C2_XCL1",269,2.478
+"TC","T and NK cells","NK_C3_HSPA1A",482,4.441
+"TC","T and NK cells","NK_C4_CX3CR1",283,2.607
+"TC","T and NK cells","NK_C5_KLRC2",148,1.364
+"TC","T and NK cells","NK_C6_NFKB1A",48,0.442
+"TC","T and NK cells","NK_C7_ISG15",15,0.138
+"na","B cells","B_C10_LOMO2",13,0.216
+"na","B cells","B_C11_MZB1_PC",2827,47.062
+"na","B cells","B_C1_CRIP1",18,0.3
+"na","B cells","B_C2_IGHM_Bn",27,0.449
+"na","B cells","B_C3_HSPA1A",19,0.316
+"na","B cells","B_C4_FCRL1",1994,33.195
+"na","B cells","B_C5_IFIT3",2,0.033
+"na","B cells","B_C7_MKI67",474,7.891
+"na","B cells","B_C8_BACH2",632,10.521
+"na","B cells","B_C9_IGLL5",1,0.017
+"na","Endothelial cells","EC_C10_COL1A2",109,2.191
+"na","Endothelial cells","EC_C11_RROX1",21,0.422
+"na","Endothelial cells","EC_C12_FCN3",216,4.342
+"na","Endothelial cells","EC_C13_MKI67",14,0.281
+"na","Endothelial cells","EC_C1_IGFBP7",732,14.714
+"na","Endothelial cells","EC_C2_GJA5",758,15.236
+"na","Endothelial cells","EC_C3_HSPA1A",162,3.256
+"na","Endothelial cells","EC_C4_FLT1",283,5.688
+"na","Endothelial cells","EC_C5_ROBO2",1913,38.452
+"na","Endothelial cells","EC_C6_ACKR1",239,4.804
+"na","Endothelial cells","EC_C7_IL6",276,5.548
+"na","Endothelial cells","EC_C8_IL32",181,3.638
+"na","Endothelial cells","EC_C9_CXCR4",71,1.427
+"na","Epithelial cells","Epithelial",2116,100
+"na","Mast cells","Mast",574,100
+"na","Mesenchymal cells","F_C1_MMP11",526,2.461
+"na","Mesenchymal cells","F_C2_MIF",392,1.834
+"na","Mesenchymal cells","F_C3_CXCL12",9902,46.327
+"na","Mesenchymal cells","F_C4_IGF1",970,4.538
+"na","Mesenchymal cells","F_C5_SPP1",6139,28.722
+"na","Mesenchymal cells","F_C6_COL2A1",448,2.096
+"na","Mesenchymal cells","F_C7_MKI67",40,0.187
+"na","Mesenchymal cells","Per_C1_RGS5",821,3.841
+"na","Mesenchymal cells","Per_C2_MYH11",2136,9.993
+"na","Myeloid cells","M_C10_MKI67_Macro",194,1.466
+"na","Myeloid cells","M_C11_MT1G_Macro",1,0.008
+"na","Myeloid cells","M_C12_HSPA1A_Macro",28,0.212
+"na","Myeloid cells","M_C13_MMP9_Macro",10,0.076
+"na","Myeloid cells","M_C14_CD1C_cDC",137,1.035
+"na","Myeloid cells","M_C15_LAMP3_cDC",42,0.317
+"na","Myeloid cells","M_C16_LILRA4_pDC",458,3.462
+"na","Myeloid cells","M_C17_S100A8_Neutro",5359,40.503
+"na","Myeloid cells","M_C18_ISG15_Neutro",50,0.378
+"na","Myeloid cells","M_C19_AZU1_Neutro",541,4.089
+"na","Myeloid cells","M_C1_IL1B_Mono",1317,9.954
+"na","Myeloid cells","M_C20_CXCL8_Neutro",1,0.008
+"na","Myeloid cells","M_C2_S100A8_Mono",4472,33.799
+"na","Myeloid cells","M_C3_FCGR3A_Mono",114,0.862
+"na","Myeloid cells","M_C4_VCAN_Mono",177,1.338
+"na","Myeloid cells","M_C5_CCL3_C1QA_Macro",88,0.665
+"na","Myeloid cells","M_C6_SPP1_Macro",32,0.242
+"na","Myeloid cells","M_C7_TREM2_Macro",159,1.202
+"na","Myeloid cells","M_C8_BMP2K_Macro",48,0.363
+"na","Myeloid cells","M_C9_ISG15_Macro",3,0.023
+"na","Plasma cells","PC_C1_TXNDC5",1135,9.231
+"na","Plasma cells","PC_C2_GMDS",7080,57.58
+"na","Plasma cells","PC_C3_IGHGP",3048,24.789
+"na","Plasma cells","PC_C4_CD79A",24,0.195
+"na","Plasma cells","PC_C5_HSPA1A",148,1.204
+"na","Plasma cells","PC_C6_SELK",2,0.016
+"na","Plasma cells","PC_C7_HLA-DRA",17,0.138
+"na","Plasma cells","PC_C8_IGHG",833,6.775
+"na","Plasma cells","PC_C9_IGHA",9,0.073
+"na","T and NK cells","CD4T_C1_CCR7_Tn",379,3.579
+"na","T and NK cells","CD4T_C2_FOXP3_Treg",79,0.746
+"na","T and NK cells","CD4T_C3_BACH2",5109,48.239
+"na","T and NK cells","CD4T_C4_CXCL13",36,0.34
+"na","T and NK cells","CD4T_C5_TOX",202,1.907
+"na","T and NK cells","CD4T_C6_ISG15",1,0.009
+"na","T and NK cells","CD8T_C1_HSPA1A",287,2.71
+"na","T and NK cells","CD8T_C2_GZMK",621,5.863
+"na","T and NK cells","CD8T_C3_PDCD1",247,2.332
+"na","T and NK cells","CD8T_C4_XCL1",331,3.125
+"na","T and NK cells","CD8T_C5_ISG15",426,4.022
+"na","T and NK cells","CD8T_C6_TOX",1197,11.302
+"na","T and NK cells","CD8T_C7_MKI67",724,6.836
+"na","T and NK cells","NK_C1_FCGR3A",5,0.047
+"na","T and NK cells","NK_C2_XCL1",12,0.113
+"na","T and NK cells","NK_C3_HSPA1A",28,0.264
+"na","T and NK cells","NK_C4_CX3CR1",688,6.496
+"na","T and NK cells","NK_C5_KLRC2",205,1.936
+"na","T and NK cells","NK_C6_NFKB1A",14,0.132
